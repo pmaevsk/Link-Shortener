@@ -1,0 +1,10 @@
+.row {
+    justify-content: center;
+    margin: 0.5px;
+}
+
+.content-section {
+    padding: 20px 20px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }

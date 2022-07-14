@@ -1,0 +1,16 @@
+{% extends "links/header.html" %}
+
+{% block content %} 
+
+{% load crispy_forms_tags %}  
+
+<div class="container">
+    <h2 class="my-4">Add a new link</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{link_form|crispy}}
+        <button class="btn btn-primary my-4" type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

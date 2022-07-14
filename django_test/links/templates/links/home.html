@@ -1,0 +1,23 @@
+{% extends 'links/header.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="my-4">Your Links</h2>
+    <div class="row">
+        <ol>
+            {% for link in links %}
+                <li>
+                    <a href="{{link.original}}">{{link.original}}</a>
+                    <a href="{{link.short}}">{{link.short}}</a>
+                        <p class="text-muted">{{link.author}}</p>
+                </li>
+            {% empty %}
+                <p>No links added.</p>
+            {% endfor %}
+
+        </ol>
+    </div>
+</div>
+
+{% endblock %}
